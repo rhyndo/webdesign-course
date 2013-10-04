@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Password - Wikipedia, the free encyclopedia</title>
+	</head>
+	<body>
+		<h1>Password</h1>
+		<h4>From Wikipedia, the free encyclopedia</h4>
+		<span>Jump to:<a href="#">navigation</a>, <a href="#">search</a></span>
+		<span>For other uses, see <a href="#">Password (disambiguation)</a>.</span>
+		<p>A password is a secret word or string of characters used for user authentication to prove identity or access approval to gain access to a resource (example: an access code is a type of password), which should be kept secret from those not allowed access.</p>
+		<p>The use of passwords is known to be ancient. Sentries would challenge those wishing to enter an area or approaching it to supply a password or watchword, and would only allow a person or group to pass if they knew the password. In modern times, user names and passwords are commonly used by people during a log in process that controls access to protected computer operating systems, mobile phones, cable TV decoders, automated teller machines (ATMs), etc. A typical computer user has passwords for many purposes: logging into accounts, retrieving e-mail, accessing applications, databases, networks, web sites, and even reading the morning newspaper online.</p>
+		<img src="#" alt="A log in window for a website requesting a username and a password." />
+		<p>Despite the name, there is no need for passwords to be actual words; indeed passwords which are not actual words may be harder to guess, a desirable property. Some passwords are formed from multiple words and may more accurately be called a passphrase. The term passcode is sometimes used when the secret information is purely numeric, such as the personal identification number (PIN) commonly used for ATM access. Passwords are generally short enough to be easily memorized and typed.</p>
+		<p>Most organizations specify a password policy that sets requirements for the composition and usage of passwords, typically dictating minimum length, required categories (e.g. upper and lower case, numbers, and special characters), prohibited elements (e.g. own name, date of birth, address, telephone number). Some governments have national authentication frameworks[<a href="#ref1">1</a>] that define requirements for user authentication to government services, including requirements for passwords.</p>
+
+		<span>Contents</span>
+		<ol>
+			<li><a href="#choose-password">Choosing a secure and memorable password</a></li>
+			<li><a href="#factors-in-security">Factors in the security of a password system</a>
+				<ol>
+					<li><a href="#rate-to-guess">Rate at which an attacker can try guessed passwords</a></li>
+					<li><a href="#limit-of-guesses">Limits on the number of password guesses</a></li>
+					<li><a href="#password-storage">Form of stored passwords</a></li>
+					<li><a href="#verification-methods">Methods of verifying a password over a network</a>
+						<ol>
+							<li><a href="#simple-transmission">Simple transmission of the password</a>
+								<ol>
+									<li><a href="#wikipedia-verification">Wikipedia</a></li>
+								</ol>
+							</li>
+							<li><a href="#encrypted-channels">Transmission through encrypted channels</a></li>
+							<li><a href="#hash-based">Hash-based challenge-response methods</a></li>
+							<li><a href="#zero-knowledge">Zero-knowledge password proofs</a></li>
+						</ol>
+					</li>
+					<li><a href="#change-password">Procedures for changing passwords</a></li>
+					<li><a href="#password-expiry">Password longevity</a></li>
+					<li><a href="#users-per-password">Number of users per password</a></li>
+					<li><a href="#password-security">Password security architecture</a></li>
+					<li><a href="#password-on-paper">Writing down passwords on paper</a></li>
+					<li><a href="#postmortum">After death</a></li>
+				</ol>
+			</li>
+			<li><a href="#password-cracking">Password cracking</a>
+				<ol>
+					<li><a href="#incidents">Incidents</a></li>
+				</ol>
+			</li>
+			<li><a href="#password-alternatives">Alternatives to passwords for authentication</a></li>
+			<li><a href="#website-passwords">Website password systems</a></li>
+			<li><a href="#password-history">History of passwords</a></li>
+			<li><a href="#see-also">See also</a></li>
+			<li><a href="#references">References</a></li>
+			<li><a href="#external-links">External links</a></li>
+		</ol>
+
+		<h2 id="choose-password">Choosing a secure and memorable password[<a href="#">edit</a>]</h2>
+		<p>The easier a password is for the owner to remember generally means it will be easier for an attacker to guess.[<a href="#ref2">2</a>] However, passwords which are difficult to remember may also reduce the security of a system because (a) users might need to write down or electronically store the password, (b) users will need frequent password resets and (c) users are more likely to re-use the same password. Similarly, the more stringent requirements for password strength, e.g. "have a mix of uppercase and lowercase letters and digits" or "change it monthly", the greater the degree to which users will subvert the system.[<a href="#ref3">3</a>] Others argue longer passwords provide more security (e.g., entropy) than shorter passwords with a wide variety of characters.[<a href="#ref4">4</a>]</p>
+		<p>In The Memorability and Security of Passwords,[<a href="#ref5">5</a>] Jeff Yan et al. examine the effect of advice given to users about a good choice of password. They found that passwords based on thinking of a phrase and taking the first letter of each word are just as memorable as naively selected passwords, and just as hard to crack as randomly generated passwords. Combining two or more unrelated words is another good method, but a single dictionary word is not. Having a personally designed "algorithm" for generating obscure passwords is another good method.</p>
+		<p>However, asking users to remember a password consisting of a "mix of uppercase and lowercase characters" is similar to asking them to remember a sequence of bits: hard to remember, and only a little bit harder to crack (e.g. only 128 times harder to crack for 7-letter passwords, less if the user simply capitalises one of the letters). Asking users to use "both letters and digits" will often lead to easy-to-guess substitutions such as 'E' → '3' and 'I' → '1', substitutions which are well known to attackers. Similarly typing the password one keyboard row higher is a common trick known to attackers.[<a href="#">citation needed</a>]</p>
+		<p>A method to memorize a complex password is to remember a sentence like 'This year I go to Italy on Friday July 6!' and use the first characters as the actual password. In this case 'TyIgtIoFJ6!'. This method even helps against shoulder surfing.</p>
+		<p>In 2013, Google released a list of the most common password types, all of which are considered insecure because they are too easy to guess (especially after researching an individual on social media):[<a href="#ref6">6</a>]</p>
+		<ul>
+			<li>The name of a pet, child, family member, or significant other</li>
+			<li>Anniversary dates and birthdays</li>
+			<li>Birthplace</li>
+			<li>Name of a favorite holiday</li>
+			<li>Something related to a favorite sports team</li>
+			<li>The word "password"</li>
+		</ul>
+
+		<h2 id="factors-in-security">Factors in the security of a password system[<a href="#">edit</a>]</h2>
+		<p>The security of a password-protected system depends on several factors. The overall system must, of course, be designed for sound security, with protection against computer viruses, man-in-the-middle attacks and the like. Physical security issues are also a concern, from deterring shoulder surfing to more sophisticated physical threats such as video cameras and keyboard sniffers. And, of course, passwords should be chosen so that they are hard for an attacker to guess and hard for an attacker to discover using any (and all) of the available automatic attack schemes. See password strength, computer security, and computer insecurity.</p>
+		<p>Nowadays, it is a common practice for computer systems to hide passwords as they are typed. The purpose of this measure is to avoid bystanders reading the password. However, some argue that this practice may lead to mistakes and stress, encouraging users to choose weak passwords. As an alternative, users should have the option to show or hide passwords as they type them.[<a href="#ref7">7</a>]</p>
+		<p>Effective access control provisions may force extreme measures on criminals seeking to acquire a password or biometric token.[<a href="#ref8">8</a>] Less extreme measures include extortion, rubber hose cryptanalysis, and side channel attack.</p>
+		<p>Here are some specific password management issues that must be considered in thinking about, choosing, and handling, a password.</p>
+
+		<h3 id="rate-to-guess">Rate at which an attacker can try guessed passwords[<a href="#">edit</a>]</h3>
+		<p>The rate at which an attacker can submit guessed passwords to the system is a key factor in determining system security. Some systems impose a time-out of several seconds after a small number (e.g., three) of failed password entry attempts. In the absence of other vulnerabilities, such systems can be effectively secure with relatively simple passwords, if they have been well chosen and are not easily guessed.[<a href="#ref9">9</a>]</p>
+		<p>Many systems store or transmit a cryptographic hash of the password in a manner that makes the hash value accessible to an attacker.[<a href="#">citation needed</a>] When this is done, and it is very common,[by whom?] an attacker can work off-line, rapidly testing candidate passwords against the true password's hash value.</p>
+		<p>Passwords that are used to generate cryptographic keys (e.g., for disk encryption or Wi-Fi security) can also be subjected to high rate guessing. Lists of common passwords are widely available and can make password attacks very efficient. (See Password cracking.) Security in such situations depends on using passwords or passphrases of adequate complexity, making such an attack computationally infeasible for the attacker. Some systems, such as PGP and Wi-Fi WPA, apply a computation-intensive hash to the password to slow such attacks. See <a href="#">key stretching</a>.</p>
+
+		<h3 id="limit-of-guesses">Limits on the number of password guesses[<a href="#">edit</a>]</h3>
+		<p>An alternative to limiting the rate at which an attacker can make guesses on a password is to limit the total number of guesses that can be made. The password can be disabled, requiring a reset, after a small number of consecutive bad guesses (say 5); and the user may be required to change the password after a larger cumulative number of bad guesses (say 30), to prevent an attacker from making an arbitrarily large number of bad guesses by interspersing them between good guesses made by the legitimate password owner. [<a href="#ref10">10</a>] The username associated with the password can be changed to counter a denial of service attack.</p>
+
+		<h3 id="password-storage">Form of stored passwords[<a href="#">edit</a>]</h3>
+		<p>Some computer systems store user passwords as plaintext, against which to compare user log on attempts. If an attacker gains access to such an internal password store, all passwords—and so all user accounts—will be compromised. If some users employ the same password for accounts on different systems, those will be compromised as well.</p>
+		<p>More secure systems store each password in a cryptographically protected form, so access to the actual password will still be difficult for a snooper who gains internal access to the system, while validation of user access attempts remains possible. The most secure don't store passwords at all, but a one-way derivation, such as a polynomial, modulus, or an advanced hash function.[<a href="#ref4">4</a>]</p>
+		<p>A common approach stores only a “hashed” form of the plaintext password. When a user types in a password on such a system, the password handling software runs through a cryptographic hash algorithm, and if the hash value generated from the user’s entry matches the hash stored in the password database, the user is permitted access. The hash value is created by applying a cryptographic hash function to a string consisting of the submitted password and, in many implementations, another value known as a salt. A salt prevents attackers from easily building a list of hash values for common passwords and prevents password cracking efforts from scaling across all users.[<a href="#ref11">11</a>] MD5 and SHA1 are frequently used cryptographic hash functions but they are not recommended for password hashing unless they are used as part of a larger construction such as in PBKDF2.[<a href="#ref12">12</a>]</p>
+		<p>The stored data—sometimes called the "password verifier" or the "password hash"—is often stored in Modular Crypt Format or RFC 2307 hash format, sometimes in the /etc/passwd file or the /etc/shadow file.[<a href="#ref13">13</a>]</p>
+		<p>If a cryptographic hash function is well designed, it is computationally infeasible to reverse the function to recover a plaintext password. An attacker can, however, use widely available tools to attempt to guess the passwords. These tools work by hashing possible passwords and comparing the result of each guess to the actual password hashes. If the attacker finds a match, he knows that his guess is the actual password for the associated user.</p>
+		<p>Password cracking tools can operate by brute force (i.e. trying every possible combination of characters) or by hashing every word from a list; large lists of possible passwords in many languages are widely available on the Internet.[<a href="#ref4">4</a>] The existence of password cracking tools allows attackers to easily recover poorly chosen passwords. In particular, attackers can quickly recover passwords that are short, dictionary words, simple variations on dictionary words or that use easily guessable patterns.[<a href="#ref14">14</a>]</p>
+		<p>A modified version of the DES algorithm was used as the basis for the password hashing algorithm in early Unix systems.[<a href="#ref15">15</a>] The crypt algorithm used a 12-bit salt value so that each user’s hash was unique and iterated the DES algorithm 25 times in order to make the hash function slower, both measures intended to frustrate automated guessing attacks.[<a href="#ref15">15</a>] The user’s password was used as a key to encrypt a fixed value. More recent Unix or Unix like systems (e.g., Linux or the various BSD systems) use more secure password hashing algorithms such as PBKDF2, bcrypt, and scrypt which have large salts and an adjustable cost or number of iterations.[<a href="#ref16">16</a>]</p>
+		<p>A poorly designed hash function can make attacks feasible even if a strong password is chosen. See LM hash for a widely deployed, and insecure, example.[<a href="#ref">17</a>]</p>
+
+		<h3 id="verification-methods">Methods of verifying a password over a network[<a href="#">edit</a>]</h3>
+		<p>Various methods have been used to verify submitted passwords in a network setting:</p>
+
+		<h4 id="simple-transmission">Simple transmission of the password[<a href="#">edit</a>]</h4>
+		<p>Passwords are vulnerable to interception (i.e., "snooping") while being transmitted to the authenticating machine or person. If the password is carried as electrical signals on unsecured physical wiring between the user access point and the central system controlling the password database, it is subject to snooping by wiretapping methods. If it is carried as packetized data over the Internet, anyone able to watch the packets containing the logon information can snoop with a very low probability of detection.</p>
+		<p>Email is sometimes used to distribute passwords but this is generally an insecure method. Since most email is sent as plaintext, a message containing a password is readable without effort during transport by any eavesdropper. Further, the message will be stored as plaintext on at least two computers: the sender's and the recipient's. If it passes through intermediate systems during its travels, it will probably be stored on there as well, at least for some time, and may be copied to backup, cache or history files on any of these systems.</p>
+
+		<h5 id="wikipedia-verification">Wikipedia[<a href="#">edit</a>]</h5>
+		<p>An example of cleartext transmission of passwords is the original Wikipedia web site. When a user logs into his Wikipedia account, his username and password are sent from his computer's browser through the Internet as cleartext. In principle, anyone could read them in transit and thereafter log into the user's account as him; Wikipedia's servers have no way of distinguishing such an attacker from the user. In practice, an unknowably larger number could do so as well (e.g., employees at a user's Internet Service Provider, at any of the systems through which the traffic passes, etc.). More recently, Wikipedia has offered a secure login option, which, like many e-commerce sites, uses the SSL / (TLS) cryptographically based protocol to eliminate the cleartext transmission. But, because anyone can gain access to Wikipedia (without logging in at all), and then edit essentially all articles, it can be argued that there is little need to encrypt these transmissions as little is being protected. Other websites (e.g., banks and financial institutions) have quite different security requirements, and cleartext transmission of anything is clearly insecure in those contexts.</p>
+		<p>Using client-side encryption will only protect transmission from the mail handling system server to the client machine. Previous or subsequent relays of the email will not be protected and the email will probably be stored on multiple computers, certainly on the originating and receiving computers, most often in cleartext.</p>
+
+		<h4 id="encrypted-channels">Transmission through encrypted channels[<a href="#">edit</a>]</h4>
+		<p>The risk of interception of passwords sent over the Internet can be reduced by, among other approaches, using cryptographic protection. The most widely used is the Transport Layer Security (TLS, previously called SSL) feature built into most current Internet browsers. Most browsers alert the user of a TLS/SSL protected exchange with a server by displaying a closed lock icon, or some other sign, when TLS is in use. There are several other techniques in use; see cryptography.</p>
+
+		<h4 id="hash-based">Hash-based challenge-response methods[<a href="#">edit</a>]</h4>
+		<p>Unfortunately, there is a conflict between stored hashed-passwords and hash-based challenge-response authentication; the latter requires a client to prove to a server that he knows what the shared secret (i.e., password) is, and to do this, the server must be able to obtain the shared secret from its stored form. On many systems (including Unix-type systems) doing remote authentication, the shared secret usually becomes the hashed form and has the serious limitation of exposing passwords to offline guessing attacks. In addition, when the hash is used as a shared secret, an attacker does not need the original password to authenticate remotely; he only needs the hash.</p>
+
+		<h4 id="zero-knowledge">Zero-knowledge password proofs[<a href="#">edit</a>]</h4>
+		<p>Rather than transmitting a password, or transmitting the hash of the password, password-authenticated key agreement systems can perform a zero-knowledge password proof, which proves knowledge of the password without exposing it.</p>
+		<p>Moving a step further, augmented systems for password-authenticated key agreement (e.g., AMP, B-SPEKE, PAK-Z, SRP-6) avoid both the conflict and limitation of hash-based methods. An augmented system allows a client to prove knowledge of the password to a server, where the server knows only a (not exactly) hashed password, and where the unhashed password is required to gain access.</p>
+
+		<h3 id="change-password">Procedures for changing passwords[<a href="#">edit</a>]</h3>
+		<p>Usually, a system must provide a way to change a password, either because a user believes the current password has been (or might have been) compromised, or as a precautionary measure. If a new password is passed to the system in unencrypted form, security can be lost (e.g., via wiretapping) before the new password can even be installed in the password database. And, of course, if the new password is given to a compromised employee, little is gained. Some web sites include the user-selected password in an unencrypted confirmation e-mail message, with the obvious increased vulnerability.</p>
+		<p>Identity management systems are increasingly used to automate issuance of replacements for lost passwords, a feature called self service password reset. The user's identity is verified by asking questions and comparing the answers to ones previously stored (i.e., when the account was opened).</p>
+		<p>Some password reset questions ask for personal information that could be found on social media, such as mother's maiden name. As a result, some security experts recommend either making up your own questions or giving false answers.[<a href="#ref18">18</a>]</p>
+
+		<h3 id="password-expiry">Password longevity[<a href="#">edit</a>]</h3>
+		<p>"Password aging" is a feature of some operating systems which forces users to change passwords frequently (e.g., quarterly, monthly or even more often). Such policies usually provoke user protest and foot-dragging at best and hostility at worst. There is often an increase in the people who note down the password and leave it where it can easily be found, as well as helpdesk calls to reset a forgotten password. Users may use simpler passwords or develop variation patterns on a consistent theme to keep their passwords memorable. Because of these issues, there is some debate[<a href="#ref19">19</a>] as to whether password aging is effective. The intended benefit is mainly that a stolen password will be made ineffective if it is reset; however in many cases, particularly with administrative or "root" accounts, once an attacker has gained access, he can make alterations to the operating system that will allow him future access even after the initial password he used expires. (see <a href="#">rootkit</a>).</p>
+		<p>The other less-frequently cited, and possibly more valid reason is that in the event of a long brute force attack, the password will be invalid by the time it has been cracked. Specifically, in an environment where it is considered important to know the probability of a fraudulent login in order to accept the risk, one can ensure that the total number of possible passwords multiplied by the time taken to try each one (assuming the greatest conceivable computing resources) is much greater than the password lifetime. However there is no documented evidence that the policy of requiring periodic changes in passwords increases system security.</p>
+		<p>Password aging may be required because of the nature of IT systems the password allows access to; if personal data is involved the EU Data Protection Directive is in force. Implementing such a policy, however, requires careful consideration of the relevant human factors. Humans memorize by association, so it is impossible to simply replace one memory with another. Two psychological phenomena interfere with password substitution. "Primacy" describes the tendency for an earlier memory to be retained more strongly than a later one. "Interference" is the tendency of two memories with the same association to conflict. Because of these effects most users must resort to a simple password containing a number that can be incremented each time the password is changed.</p>
+
+		<h3 id="users-per-password">Number of users per password[<a href="#">edit</a>]</h3>
+		<p>Sometimes a single password controls access to a device, for example, for a network router, or password-protected mobile phone. However, in the case of a computer system, a password is usually stored for each user account, thus making all access traceable (save, of course, in the case of users sharing passwords). A would-be user on most systems must supply a username as well as a password, almost always at account set up time, and periodically thereafter. If the user supplies a password matching the one stored for the supplied username, he or she is permitted further access into the computer system. This is also the case for a cash machine, except that the 'user name' is typically the account number stored on the bank customer's card, and the PIN is usually quite short (4 to 6 digits).</p>
+		<p>Allotting separate passwords to each user of a system is preferable to having a single password shared by legitimate users of the system, certainly from a security viewpoint. This is partly because users are more willing to tell another person (who may not be authorized) a shared password than one exclusively for their use. Single passwords are also much less convenient to change because many people need to be told at the same time, and they make removal of a particular user's access more difficult, as for instance on graduation or resignation. Per-user passwords are also essential if users are to be held accountable for their activities, such as making financial transactions or viewing medical records.</p>
+
+		<h3 id="password-security">Password security architecture[<a href="#">edit</a>]</h3>
+		<p>Common techniques used to improve the security of computer systems protected by a password include:<p>
+		<ul>
+			<li>Not displaying the password on the display screen as it is being entered or obscuring it as it is typed by using asterisks (*) or bullets (•).</li>
+			<li>Allowing passwords of adequate length. (Some legacy operating systems, including early versions[<a href="#">which?</a>] of Unix and Windows, limited passwords to an 8 character maximum,[<a href="#ref20">20</a>][<a href="#ref21">21</a>][<a href="#ref22">22</a>] reducing security.)</li>
+			<li>Requiring users to re-enter their password after a period of inactivity (a semi log-off policy).</li>
+			<li>Enforcing a password policy to increase password strength and security.
+				<ul>
+					<li>Requiring periodic password changes.</li>
+					<li>Assigning randomly chosen passwords.</li>
+					<li>Requiring minimum password lengths.[<a href="#ref12">12</a>]</li>
+					<li>Some systems require characters from various character classes in a password—for example, "must have at least one uppercase and at least one lowercase letter". However, all-lowercase passwords are more secure per keystroke than mixed capitalization passwords.[<a href="#ref23">23</a>]</li>
+					<li>Providing an alternative to keyboard entry (e.g., spoken passwords, or biometric passwords).</li>
+					<li>Requiring more than one authentication system, such as 2-factor authentication (something a user has and something the user knows).</li>
+				</ul>
+			</li>
+			<li>Using encrypted tunnels or password-authenticated key agreement to prevent access to transmitted passwords via network attacks</li>
+			<li>Limiting the number of allowed failures within a given time period (to prevent repeated password guessing). After the limit is reached, further attempts will fail (including correct password attempts) until the beginning of the next time period. However, this is vulnerable to a form of denial of service attack.</li>
+			<li>Introducing a delay between password submission attempts to slow down automated password guessing programs.</li>
+		</ul>
+		<p>Some of the more stringent policy enforcement measures can pose a risk of alienating users, possibly decreasing security as a result.</p>
+
+		<h3 id="password-on-paper">Writing down passwords on paper[<a href="#">edit</a>]</h3>
+		<p>Historically, many security experts asked people to memorize their passwords: "Never write down a password". More recently, many security experts such as Bruce Schneier recommend that people use passwords that are too complicated to memorize, write them down on paper, and keep them in a wallet.[<a href="#ref24">24</a>][<a href="#ref25">25</a>][<a href="#ref26">26</a>][<a href="#ref27">27</a>][<a href="#ref28">28</a>][<a href="#ref29">29</a>][<a href="#ref30">30</a>]</p>
+		<p>Password manager software can also store passwords relatively safely, in an encrypted file sealed with a single password.</p>
+
+		<h3 id="postmortum">After death[<a href="#">edit</a>]</h3>
+		<p>According to a survey by the University of London, one in ten people are now leaving their passwords in their wills to pass on this important information when they die. One third of people, according to the poll, agree that their password protected data is important enough to pass on in their will.[<a href="#ref31">31</a>] Facebook, for example, will not provide access for anyone but the actual account owner.[<a href="#ref32">32</a>]</p>
+
+		<h2 id="password-cracking">Password cracking[<a href="#">edit</a>]</h2>
+		<span>Main article: <a href="#">Password cracking</a></span>
+		<p>Attempting to crack passwords by trying as many possibilities as time and money permit is a brute force attack. A related method, rather more efficient in most cases, is a dictionary attack. In a dictionary attack, all words in one or more dictionaries are tested. Lists of common passwords are also typically tested.</p>
+		<p>Password strength is the likelihood that a password cannot be guessed or discovered, and varies with the attack algorithm used. Cryptologists and computer scientists often refer to the strength or 'hardness' in terms of entropy.[<a href="#ref4">4</a>]</p>
+		<p>Passwords easily discovered are termed weak or vulnerable; passwords very difficult or impossible to discover are considered strong. There are several programs available for password attack (or even auditing and recovery by systems personnel) such as L0phtCrack, John the Ripper, and Cain; some of which use password design vulnerabilities (as found in the Microsoft LANManager system) to increase efficiency. These programs are sometimes used by system administrators to detect weak passwords proposed by users.</p>
+		<p>Studies of production computer systems have consistently shown that a large fraction of all user-chosen passwords are readily guessed automatically. For example, Columbia University found 22% of user passwords could be recovered with little effort.[<a href="#ref33">33</a>] According to Bruce Schneier, examining data from a 2006 phishing attack, 55% of MySpace passwords would be crackable in 8 hours using a commercially available Password Recovery Toolkit capable of testing 200,000 passwords per second in 2006.[<a href="#ref34">34</a>] He also reported that the single most common password was password1, confirming yet again the general lack of informed care in choosing passwords among users. (He nevertheless maintained, based on these data, that the general quality of passwords has improved over the years—for example, average length was up to eight characters from under seven in previous surveys, and less than 4% were dictionary words.[<a href="#ref35">35</a>])</p>
+
+		<h3 id="incidents">Incidents[<a href="#">edit</a>]</h3>
+		<ul>
+			<li>On July 16, 1998, CERT reported an incident where an attacker had found 186,126 encrypted passwords. At the time the attacker was discovered, 47,642 passwords had already been cracked.[<a href="#ref36">36</a>]</li>
+			<li>In December 2009, a major password breach of the Rockyou.com website occurred that led to the release of 32 million passwords. The hacker then leaked the full list of the 32 million passwords (with no other identifiable information) to the internet. Passwords were stored in cleartext in the database and were extracted through a SQL Injection vulnerability. The Imperva Application Defense Center (ADC) did an analysis on the strength of the passwords.[<a href="#ref37">37</a>]</li>
+			<li>In June, 2011, NATO (North Atlantic Treaty Organization) experienced a security breach that led to the public release of first and last names, usernames, and passwords for more than 11,000 registered users of their e-Bookshop. The data was leaked as part of Operation AntiSec, a movement that includes Anonymous, LulzSec, as well as other hacking groups and individuals. The aim of AntiSec is to expose personal, sensitive, and restricted information to the world, using any means necessary.[<a href="#ref38">38</a>]</li>
+			<li>On July 11, 2011, Booz Allen Hamilton, a U.S. Consulting firm that does a substantial amount of work for the Pentagon, had their servers hacked by Anonymous and leaked the same day. "The leak, dubbed 'Military Meltdown Monday,' includes 90,000 logins of military personnel—including personnel from USCENTCOM, SOCOM, the Marine corps, various Air Force facilities, Homeland Security, State Department staff, and what looks like private sector contractors."[39] These leaked passwords wound up being hashed in Sha1, and were later decrypted and analyzed by the ADC team at Imperva, revealing that even military personnel look for shortcuts and ways around the password requirements.[<a href="#ref40">40</a>]</li>
+		</ul>
+
+		<h2 id="password-alternatives">Alternatives to passwords for authentication[<a href="#">edit</a>]</h2>
+		<p>The numerous ways in which permanent or semi-permanent passwords can be compromised has prompted the development of other techniques. Unfortunately, some are inadequate in practice, and in any case few have become universally available for users seeking a more secure alternative.[<a href="#">citation needed</a>]</p>
+		<ul>
+			<li>Single-use passwords. Having passwords which are only valid once makes many potential attacks ineffective. Most users find single use passwords extremely inconvenient. They have, however, been widely implemented in personal online banking, where they are known as Transaction Authentication Numbers (TANs). As most home users only perform a small number of transactions each week, the single use issue has not led to intolerable customer dissatisfaction in this case.</li>
+			<li>Time-synchronized one-time passwords are similar in some ways to single-use passwords, but the value to be entered is displayed on a small (generally pocketable) item and changes every minute or so.</li>
+			<li>PassWindow one-time passwords are used as single-use passwords, but the dynamic characters to be entered are visible only when a user superimposes a unique printed visual key over a server generated challenge image shown on the user's screen.</li>
+			<li>Access controls based on public key cryptography e.g. ssh. The necessary keys are usually too large to memorize (but see proposal Passmaze)[<a href="#ref41">41</a>] and must be stored on a local computer, security token or portable memory device, such as a USB flash drive or even floppy disk.</li>
+			<li>Biometric methods promise authentication based on unalterable personal characteristics, but currently (2008) have high error rates and require additional hardware to scan, for example, fingerprints, irises, etc. They have proven easy to spoof in some famous incidents testing commercially available systems, for example, the gummie fingerprint spoof demonstration,[<a href="#ref42">42</a>] and, because these characteristics are unalterable, they cannot be changed if compromised; this is a highly important consideration in access control as a compromised access token is necessarily insecure.</li>
+			<li>Single sign-on technology is claimed to eliminate the need for having multiple passwords. Such schemes do not relieve user and administrators from choosing reasonable single passwords, nor system designers or administrators from ensuring that private access control information passed among systems enabling single sign-on is secure against attack. As yet, no satisfactory standard has been developed.</li>
+			<li>Envaulting technology is a password-free way to secure data on e.g. removable storage devices such as USB flash drives. Instead of user passwords, access control is based on the user's access to a network resource.</li>
+			<li>Non-text-based passwords, such as graphical passwords or mouse-movement based passwords.[<a href="#ref43">43</a>] Graphical passwords are an alternative means of authentication for log-in intended to be used in place of conventional password; they use images, graphics or colours instead of letters, digits or special characters. One system requires users to select a series of faces as a password, utilizing the human brain's ability to recall faces easily.[<a href="#ref44">44</a>] In some implementations the user is required to pick from a series of images in the correct sequence in order to gain access.[<a href="#ref45">45</a>] Another graphical password solution creates a one-time password using a randomly generated grid of images. Each time the user is required to authenticate, they look for the images that fit their pre-chosen categories and enter the randomly generated alphanumeric character that appears in the image to form the one-time password.[<a href="#ref46">46</a>][<a href="#ref47">47</a>] So far, graphical passwords are promising, but are not widely used. Studies on this subject have been made to determine its usability in the real world. While some believe that graphical passwords would be harder to crack, others suggest that people will be just as likely to pick common images or sequences as they are to pick common passwords.[<a href="#">citation needed</a>]</li>
+			<li>2D Key (2-Dimensional Key)[<a href="#ref48">48</a>] is a 2D matrix-like key input method having the key styles of multiline passphrase, crossword, ASCII/Unicode art, with optional textual semantic noises, to create big password/key beyond 128 bits to realize the MePKC (Memorizable Public-Key Cryptography)[<a href="#ref49">49</a>] using fully memorizable private key upon the current private key management technologies like encrypted private key, split private key, and roaming private key.
+Cognitive passwords use question and answer cue/response pairs to verify identity.</li>
+		</ul>
+
+		<h2 id="website-passwords">Website password systems[<a href="#">edit</a>]</h2>
+		<p>Passwords are used on websites to authenticate users and are usually maintained on the Web server, meaning the browser on a remote system sends a password to the server (by HTTP POST), the server checks the password and sends back the relevant content (or an access denied message). This process eliminates the possibility of local reverse engineering as the code used to authenticate the password does not reside on the local machine.</p>
+		<p>Transmission of the password, via the browser, in plaintext means it can be intercepted along its journey to the server. Many web authentication systems use SSL to establish an encrypted session between the browser and the server, and is usually the underlying meaning of claims to have a "secure Web site". This is done automatically by the browser and increases integrity of the session, assuming neither end has been compromised and that the SSL/TLS implementations used are high quality ones.</p>
+
+		<h2 id="password-history">History of passwords[<a href="#">edit</a>]</h2>
+		<p>Passwords or watchwords have been used since ancient times. Polybius describes the system for the distribution of watchwords in the Roman military as follows:</p>
+		<blockquote>The way in which they secure the passing round of the watchword for the night is as follows: from the tenth maniple of each class of infantry and cavalry, the maniple which is encamped at the lower end of the street, a man is chosen who is relieved from guard duty, and he attends every day at sunset at the tent of the tribune, and receiving from him the watchword — that is a wooden tablet with the word inscribed on it – takes his leave, and on returning to his quarters passes on the watchword and tablet before witnesses to the commander of the next maniple, who in turn passes it to the one next him. All do the same until it reaches the first maniples, those encamped near the tents of the tribunes. These latter are obliged to deliver the tablet to the tribunes before dark. So that if all those issued are returned, the tribune knows that the watchword has been given to all the maniples, and has passed through all on its way back to him. If any one of them is missing, he makes inquiry at once, as he knows by the marks from what quarter the tablet has not returned, and whoever is responsible for the stoppage meets with the punishment he merits.[<a href="#ref50">50</a>]</blockquote>
+		<p>Passwords in military use evolved to include not just a password, but a password and a counterpassword; for example in the opening days of the Battle of Normandy, paratroopers of the U.S. 101st Airborne Division used a password — flash — which was presented as a challenge, and answered with the correct response — thunder. The challenge and response were changed every three days. American paratroopers also famously used a device known as a "cricket" on D-Day in place of a password system as a temporarily unique method of identification; one metallic click given by the device in lieu of a password was to be met by two clicks in reply.[<a href="#ref51">51</a>]</p>
+		<p>Passwords have been used with computers since the earliest days of computing. MIT's CTSS, one of the first time sharing systems, was introduced in 1961. It had a LOGIN command that requested a user password. "After typing PASSWORD, the system turns off the printing mechanism, if possible, so that the user may type in his password with privacy."[<a href="#ref52">52</a>] In the early 1970s, Robert Morris invented the idea of storing login passwords in a hashed form as part of the Unix operating system. The system was based on a simulated Hagelin rotor crypto machine, and first appeared in 6th Edition Unix in 1974. A later version of his algorithm, known as crypt(3), used a 12-bit salt and invoked a modified form of the DES algorithm 25 times to reduce the risk of pre-computed dictionary attacks.[<a href="#ref53">53</a>]</p>
+
+		<h2 id="see-also">See also[<a href="#">edit</a>]</h2>
+		<ul>
+			<li><a href="#">Access code (disambiguation)</a></li>
+			<li><a href="#">Authentication</a></li>
+			<li><a href="#">CAPTCHA</a></li>
+			<li><a href="#">Diceware</a></li>
+			<li><a href="#">Kerberos (protocol)</a></li>
+			<li><a href="#">Keyfile</a></li>
+			<li><a href="#">Passphrase</a></li>
+			<li><a href="#">Password cracking</a></li>
+			<li><a href="#">Password fatigue</a></li>
+			<li><a href="#">Password length parameter</a></li>
+			<li><a href="#">Password manager</a></li>
+			<li><a href="#">Password notification e-mail</a></li>
+			<li><a href="#">Password policy</a></li>
+			<li><a href="#">Password psychology</a></li>
+			<li><a href="#">Password strength</a></li>
+			<li><a href="#">Password synchronization</a></li>
+			<li><a href="#">Password-authenticated key agreement</a></li>
+			<li><a href="#">Pre-shared key</a></li>
+			<li><a href="#">Random password generator</a></li>
+			<li><a href="#">Rainbow table</a></li>
+			<li><a href="#">Self-service password reset</a></li>
+			<li><a href="#">Shibboleth</a></li>
+		</ul>
+
+		<h2 id="references">References[<a href="#">edit</a>]</h2>
+		<ol>
+			<li id="ref1">^ Improving Usability of Password Management with Standardized Password Policies. Retrieved on 2012-10-12.</li>
+			<li id="ref2">^ Vance, Ashlee (2010-01-10). "If Your Password Is 123456, Just Make It HackMe". The New York Times.&#160;</li>
+			<li id="ref3">^ Managing Network Security. Fred Cohen and Associates. All.net. Retrieved on 2012-05-20.</li>
+			<li id="ref4">^ a b c d Lundin, Leigh (2013-08-11). "PINs and Passwords, Part 2". Passwords. Orlando: SleuthSayers.&#160;</li>
+			<li id="ref5">^ The Memorability and Security of Passwords. ncl.ac.uk. Retrieved on 2012-05-20.</li>
+			<li id="ref6">^ http://techland.time.com/2013/08/08/google-reveals-the-10-worst-password-ideas/?iid=biz-article-mostpop2</li>
+			<li id="ref7">^ Lyquix Blog: Do We Need to Hide Passwords?. Lyquix.com. Retrieved on 2012-05-20.</li>
+			<li id="ref8">^ Jonathan Kent Malaysia car thieves steal finger. BBC (2005-03-31)</li>
+			<li id="ref9">^ Stuart Brown Top ten passwords used in the United Kingdom. Modernlifeisrubbish.co.uk (2006-05-26). Retrieved on 2012-05-20.</li>
+			<li id="ref10">^ US patent 8046827&#160;</li>
+			<li id="ref11">^ The Bug Charmer: Passwords Matter. Bugcharmer.blogspot.com (2012-06-20). Retrieved on 2013-07-30.</li>
+			<li id="ref12">^ a b Alexander, Steven. (2012-06-20) The Bug Charmer: How long should passwords be?. Bugcharmer.blogspot.com. Retrieved on 2013-07-30.</li>
+			<li id="ref13">^ "passlib.hash - Password Hashing Schemes".</li>
+			<li id="ref14">^ Cracking Story – How I Cracked Over 122 Million SHA1 and MD5 Hashed Passwords «&#160;Thireus' Bl0g. Blog.thireus.com (2012-08-29). Retrieved on 2013-07-30.</li>
+			<li id="ref15">^ a b Morris, Robert and Thompson, Ken (1979). "Password Security: A Case History". Communications of the ACM 22 (11): 594–597. doi:10.1145/359168.359172.&#160;</li>
+			<li id="ref16">^ Password Protection for Modern Operating Systems. Usenix.org. Retrieved on 2012-05-20.</li>
+			<li id="ref17">^ How to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases. support.microsoft.com (2007-12-03). Retrieved on 2012-05-20.</li>
+			<li id="ref18">^ http://www.techlicious.com/tip/why-you-should-lie-when-setting-up-password-security-questions/</li>
+			<li id="ref19">^ Schneier on Security discussion on changing passwords. Schneier.com. Retrieved on 2012-05-20.</li>
+			<li id="ref20">^ Seltzer, Larry. (2010-02-09) "American Express: Strong Credit, Weak Passwords". Pcmag.com. Retrieved on 2012-05-20.</li>
+			<li id="ref21">^ "Ten Windows Password Myths": "NT dialog boxes ... limited passwords to a maximum of 14 characters"</li>
+			<li id="ref22">^ "You must provide a password between 1 and 8 characters in length". Jira.codehaus.org. Retrieved on 2012-05-20.</li>
+			<li id="ref23">^ "To Capitalize or Not to Capitalize?". World.std.com. Retrieved on 2012-05-20.</li>
+			<li id="ref24">^ Bruce Schneier&#160;: Crypto-Gram Newsletter May 15, 2001</li>
+			<li id="ref25">^ "Ten Windows Password Myths": Myth #7. You Should Never Write Down Your Password</li>
+			<li id="ref26">^ Kotadia, Munir (2005-05-23) Microsoft security guru: Jot down your passwords. News.cnet.com. Retrieved on 2012-05-20.</li>
+			<li id="ref27">^ "The Strong Password Dilemma" by Richard E. Smith: "we can summarize classical password selection rules as follows: The password must be impossible to remember and never written down."</li>
+			<li id="ref28">^ "Choosing Random Passwords" by Bob Jenkins</li>
+			<li id="ref29">^ "The Memorability and Security of Passwords – Some Empirical Results"
+			"your password ... in a secure place, such as the back of your wallet or purse."</li>
+			<li>^ "Should I write down my passphrase?". World.std.com. Retrieved on 2012-05-20.</li>
+			<li>^ Jaffery, Saman M. (17 October 2011). "Survey: 11% of Brits Include Internet Passwords in Will". Hull &amp; Hull LLP. Retrieved 16 July 2012.&#160;</li>
+			<li>^ "My child's Facebook account is blocked or disabled". Facebook. Retrieved 16 July 2012.&#160;</li>
+			<li>^ Password. cs.columbia.edu</li>
+			<li>^ Schneier, Real-World Passwords. Schneier.com. Retrieved on 2012-05-20.</li>
+			<li>^ MySpace Passwords Aren't So Dumb. Wired.com (2006-10-27). Retrieved on 2012-05-20.</li>
+			<li>^ "CERT IN-98.03". 1998-07-16. Retrieved 2009-09-09.&#160;</li>
+			<li>^ "Consumer Password Worst Practices".&#160;</li>
+			<li>^ "NATO site hacked". The Register. 2011-06-24. Retrieved July 24, 2011.&#160;</li>
+			<li>^ "Anonymous Leaks 90,000 Military Email Accounts in Latest Antisec Attack". 2011-07-11.&#160;</li>
+			<li>^ "Military Password Analysis". 2011-07-12.&#160;</li>
+			<li>^ Cryptology ePrint Archive: Report 2005/434. eprint.iacr.org. Retrieved on 2012-05-20.</li>
+			<li>^ T Matsumoto. H Matsumotot, K Yamada, and S Hoshino (2002). "Impact of artificial 'Gummy' Fingers on Fingerprint Systems". Proc SPIE 4677: 275. doi:10.1117/12.462719.&#160;</li>
+			<li>^ Using AJAX for Image Passwords – AJAX Security Part 1 of 3. waelchatila.com (2005-09-18). Retrieved on 2012-05-20.</li>
+			<li>^ Butler, Rick A. (2004-12-21) Face in the Crowd. mcpmag.com. Retrieved on 2012-05-20.</li>
+			<li>^ graphical password or graphical user authentication (GUA). searchsecurity.techtarget.com. Retrieved on 2012-05-20.</li>
+			<li>^ Ericka Chickowski (2010-11-03). "Images Could Change the Authentication Picture". Dark Reading.&#160;</li>
+			<li>^ "Confident Technologies Delivers Image-Based, Multifactor Authentication to Strengthen Passwords on Public-Facing Websites". 2010-10-28.&#160;</li>
+			<li>^ User Manual for 2-Dimensional Key (2D Key) Input Method and System. xpreeli.com. (2008-09-08) . Retrieved on 2012-05-20.</li>
+			<li>^ Kok-Wah Lee "Methods and Systems to Create Big Memorizable Secrets and Their Applications" Patent US20110055585, WO2010010430. Filing date: December 18, 2008</li>
+			<li>^ Polybius on the Roman Military. Ancienthistory.about.com (2012-04-13). Retrieved on 2012-05-20.</li>
+			<li>^ Mark Bando (2007). 101st Airborne: The Screaming Eagles in World War II. Mbi Publishing Company. ISBN&#160;978-0-7603-2984-9. Retrieved 20 May 2012.&#160;</li>
+			<li>^ CTSS Programmers Guide, 2nd Ed., MIT Press, 1965</li>
+			<li>^ Morris, Robert; Thompson, Ken (1978-04-03). "Password Security: A Case History.". Bell Laboratories. Retrieved 2011-05-09.&#160;</li>
+		</ol>
+
+		<h2 id="external-links">External links[<a href="#">edit</a>]</h2>
+		<ul>
+			<li><a href="#">Large list of commonly used passwords</a></li>
+			<li><a href="#">Large collection of statistics about passwords</a></li>
+			<li><a href="#">Graphical Passwords: A Survey</a></li>
+			<li><a href="#">Centre for Security, Communications and Network Research, University of Plymouth</a></li>
+			<li><a href="#">Research Papers on Password-based Cryptography</a></li>
+			<li><a href="#">Procedural Advice for Organisations and Administrators</a></li>
+			<li><a href="#">The international passwords conference</a></li>
+		</ul>
+
+		<footer>
+			<p>Retrieved from "<a href="#">http://en.wikipedia.org/w/index.php?title=Password&amp;oldid=575333879</a>"</p>
+			<span>Categories:</span>
+			<ul>
+				<li><a href="#">Password authentication</a></li>
+			</ul>
+			<span>Hidden categories:</span>
+			<ul>
+				<li><a href="#">All articles with unsourced statements</a></li>
+				<li><a href="#">Articles with unsourced statements from November 2011</a></li>
+				<li><a href="#">Articles with unsourced statements from August 2013</a></li>
+				<li><a href="#">Articles with specifically marked weasel-worded phrases from August 2013</a></li>
+				<li><a href="#">All articles with specifically marked weasel-worded phrases</a></li>
+				<li><a href="#">Articles with specifically marked weasel-worded phrases from September 2010</a></li>
+				<li><a href="#">Articles with unsourced statements from January 2010</a></li>
+				<li><a href="#">Articles with unsourced statements from September 2009</a></li>
+			</ul>
+			<p>This page was last modified on 1 October 2013 at 19:45.</p>
+			<p>Text is available under the Creative Commons Attribution-ShareAlike License;
+			additional terms may apply.  By using this site, you agree to the Terms of Use and Privacy Policy. 
+			Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.</p>
+			<ul>
+				<li><a href="#">Privacy policy</a></li>
+				<li><a href="#">About Wikipedia</a></li>
+				<li><a href="#">Disclaimers</a></li>
+				<li><a href="#">Contact Wikipedia</a></li>
+				<li><a href="#">Developers</a></li>
+				<li><a href="#">Mobile view</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
+
