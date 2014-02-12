@@ -13,7 +13,7 @@ body{
 }
 
 #header{
-	border:1px solid black;
+	overflow:hidden;
 	background-color:#eaeaea;
 	margin-bottom:10px;
 	margin-left:-10px;
@@ -34,7 +34,7 @@ body{
 }
 
 #footer{
-	border:1px solid black;
+	overflow:hidden;
 	background-color:#eaeaea;
 	clear:left;
 	margin-left:-10px;
