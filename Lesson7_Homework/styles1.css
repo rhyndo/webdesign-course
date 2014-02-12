@@ -1,41 +1,45 @@
 @charset "utf-8";
 /* CSS Document */
 
-#box{
-	background-color:black;
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#wrapper{
+	width:600px;
+	border:1px solid black;
+	padding: 10px 10px 10px 20px;
 	overflow:hidden;
-	width:900px;
-	padding:10px 10px 10px 20px;
 	margin:auto;
 }
+
 #header{
-	background-color:red;
-	width:101%;
-	border:1px solid white;
-	margin-bottom:20px;
+	border:1px solid black;
+	background-color:#eaeaea;
+	margin-bottom:10px;
 	margin-left:-10px;
 }
 
 #content{
-	background-color:yellow;
+	background-color:#eaeaea;
+	width:70%;
 	float:left;
-	width: 70%;
-	margin-left:-10px;
-	margin-right:10px;
+	margin:0 10px 10px -10px;
 }
 
 #sidebar{
-	background-color:green;
+	background-color:#eaeaea;
+	width:30%;
 	float:left;
-	width: 30%;
+	margin-bottom:10px;
 }
 
 #footer{
-	float:left;
-	background-color:#C0C;
-	border:1px;
-	border-style:solid;
-	width:101%;
-	margin-top:20px;
+	border:1px solid black;
+	background-color:#eaeaea;
+	clear:left;
 	margin-left:-10px;
+}
+
+p{
+	margin:10px;
 }
