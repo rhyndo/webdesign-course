@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+img{
+	width:200px;
+}
+
+#gallery{
+	float:left;
+	margin:8px;
+	width:200px;
+	height:auto;
+}
+
+#row{
+	overflow:hidden;
+	width:100%;
+}
+
+#wrapper{
+	width:900px;
+	margin:auto;
+	overflow:hidden;
+}
+
+#header{
+	text-align:center;
+	border:1px solid black;
+}
+
+#content{
+	border:1px solid black;
+	overflow:hidden;
+	padding:10px;
+}
+
+
+
+
+
+#menu{
+	overflow:hidden;
+	background:#eaeaea;
+	padding-bottom:18px;
+}
+
+#menu li{
+	float:left;
+	display:block;
+	border:1px solid white;
+}
+
+#menu a{
+	text-decoration:none;
+	background-color:#eaeaea;
+	color:black;
+	padding:10px 20px;
+	display:block;
+}
+
+#menu a:hover{
+	background-color:black;
+	color:white;
+}
+
+#menu ul ul{
+	display:none;
+}
+
+#menu ul li:hover > ul{
+	display:block;
+}
+
+#menu ul li ul li{
+	float:none;
+}
+
+#menu ul li ul{
+    position:absolute;
+	margin-left:-41px;
+}
+
+#menu ul li ul li ul{
+	position:absolute;
+	left:125px;
+	bottom:0px;
+}
