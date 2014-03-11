@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#wrapper{
+	display: inline-block;;
+	border:1px solid black;
+	padding: 15px 5px;
+	overflow:hidden;
+}
+
+ul{
+	float:left;
+	width:100%;
+	margin:0;
+	list-style-type:none;
+	padding:5px;
+}
+
+li {
+	display:inline;
+	padding:10px 5px;
+	background-color: #eaeaea;
+}
+
+a{
+	margin:10px 5px;
+	text-decoration:none;
+	color: black;
+}

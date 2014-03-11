@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#wrapper{
+	width:600px;
+	border:1px solid black;
+	padding: 5px 5px 5px 15px;
+	overflow:hidden;
+	margin:auto;
+}
+
+#header{
+	overflow:hidden;
+	background-color:#eaeaea;
+	margin-bottom:5px;
+	margin-left:-10px;
+}
+
+#content{
+	background-color:#eaeaea;
+	width:65%;
+	float:left;
+	margin-right:5px;
+}
+
+#sidebar20{
+	background-color:#eaeaea;
+	width:20%;
+	float:left;
+	margin:0 5px 5px -10px;
+}
+
+#sidebar15{
+	background-color:#eaeaea;
+	width:15%;
+	float:left;
+}
+
+#footer{
+	overflow:hidden;
+	background-color:#eaeaea;
+	clear:left;
+	margin-left:-10px;
+}
+
+p{
+	margin:10px;
+}
