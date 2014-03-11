@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<title>Form Georgi Puhalev</title>
+</head>
+
+<body>
+	<div id="wrapper">
+        <form method="get" action>
+        	<fieldset>
+            	<legend>Basic info</legend>
+                <p><label for="username">Username </label><input id="username" type="text" required placeholder="username"></p>
+                <p><label for="email">E-mail </label><input id="email" type="text" required placeholder="e-mail"></p>
+                <p><label for="password">Password </label><input id="password" type="password" required placeholder="password"></p>
+            </fieldset>
+            <br />
+            <fieldset>
+            	<legend>Additional Information</legend>
+                <p><label for="firstname">First Name </label><input id="firstname" type="text" placeholder="first name"></p>
+                <p><label for="lastname">Last Name </label><input id="lastname" type="text" placeholder="last name"></p>
+                <p><label for="website">Website </label><input id="website" type="text" placeholder="website"></p>
+                <p><label for="twitter">Twitter </label><input id="twitter" type="text" placeholder="twitter"></p>
+                <p><label for="facebook">Facebook </label><input id="facebook" type="text" placeholder="facebook"></p>
+                <p><label for="github">GitHub </label><input id="github" type="text" placeholder="github"></p>
+                <p>Sex:<br />
+					<label for="male"><input type="radio" id="male" name="sex">Yes</label>
+					<label for="female"><input type="radio" id="female" name="sex">No</label>
+                </p>
+                
+            </fieldset>
+            <br />
+            <fieldset>
+            	<legend>Music Taste</legend>
+            	<label for="genre1"><input type="checkbox" id="genre1" value="Heavy Metal">Heavy Metal</label>
+                <label for="genre2"><input type="checkbox" id="genre2" value="Thrash Metal">Thrash Metal</label>
+                <label for="genre3"><input type="checkbox" id="genre3" value="Alternative Metal">Alternative Metal</label>
+                <label for="genre4"><input type="checkbox" id="genre4" value="Death Metal">Death Metal</label>
+                <label for="genre5"><input type="checkbox" id="genre5" value="Metalcore" />Metalcore</label>
+                <label for="genre6"><input type="checkbox" id="genre6" value="Power Metal">Power Metal</label>
+                <label for="genre7"><input type="checkbox" id="genre7" value="Metal">Metal</label>
+            	<br /><br />
+                <label for="select">Select one</label>
+                <select id="select" name="mogtfo" size="1">
+                	<option value = "metal">Metal</option>
+                    <option value = "gtfo">GTFO</option>
+                </select>
+                
+            </fieldset>
+            <br />
+            <input type="submit">
+			<input type="reset">
+        </form>
+    </div>
+
+</body>
+</html>
